@@ -1,0 +1,12 @@
+{
+	"name": "hyx.scss",
+	"version": "1.0.3",
+	"main": "hyx.scss",
+	"ignore": [
+		".gitignore",
+		".editorconfig",
+		"bower.json",
+		"CHANGELOG.md",
+		"README.md"
+	]
+}

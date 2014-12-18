@@ -1,0 +1,23 @@
+{
+  "name": "hyx.scss",
+  "version": "2.0.0",
+  "main": "hyx.scss",
+  "ignore": [
+    ".gitignore",
+    ".editorconfig",
+    "bower.json",
+    "CHANGELOG.md",
+    "README.md"
+  ],
+  "homepage": "https://github.com/thinkxl/hyx.scss",
+  "_release": "2.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.0",
+    "commit": "afa358e55a3ce938397257e7e38d4f8cbd5fab35"
+  },
+  "_source": "git://github.com/thinkxl/hyx.scss.git",
+  "_target": "~2.0.0",
+  "_originalSource": "hyx.scss",
+  "_direct": true
+}

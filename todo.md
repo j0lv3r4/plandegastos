@@ -1,0 +1,12 @@
+- [ ] Create edit bill route
+- [ ] Fix edit bill view
+- [ ] Figure out how to display events on the calendar based on bills model data
+- [ ] Figure out how to show future events
+- [ ] Decide if I'm going to use bootstrap or my own CSS
+- [ ] Create a delete bill event
+- [ ] Check *Celery* for sending emails for reminders
+- [ ] Check SMS apis to send phone reminders
+- [ ] Check:
+	- http://openexchangerates.github.io/accounting.js/
+	- http://numeraljs.com/
+	- https://github.com/BobKnothe/autoNumeric

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    {% block head %}
+    <title>{% block title %}{% endblock %} - Checklist</title>
+    {% endblock %}
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		{# <link href="{{ url_for('static', filename='css/vendor/bootstrap.min.css') }}" rel="stylesheet"> #}
+		{# <link href="{{ url_for('static', filename='css/flat-ui.min.css') }}" rel="stylesheet"> #}
+    {% assets "scss_all" %}
+			<link href="{{ ASSET_URL }}" rel="stylesheet">
+    {% endassets %}
+		{% block vendor_styles %}{% endblock %}
+  </head>
+  <body>
+    <header>
+			<div class="container">
+				<div class="row">
+					<nav>
+						<ul>
+							<li><a href="/">home</a></li>
+							<li><a href="/app">app</a></li>
+							<li><a href="/login">login</a></li>
+							<li><a href="/signup">signup</a></li>
+							<li><a href="/logout">logout</a></li>
+						</ul>
+					</nav>
+				</div> <!-- .row -->
+			</div> <!-- .container -->
+    </header>
+
+    <div class="app">
+      <div class="container">
+        <div class="row">
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+							<div class="alert alert-danger">
+								<ul class=flashes>
+								{% for message in messages %}
+									<li>{{ message }}</li>
+								{% endfor %}
+								</ul>
+							</div> <!-- .alert .alert-danger -->
+            {% endif %}
+          {% endwith %}
+        </div> <!-- .row -->
+
+        <div class="row">
+          {% block content %}{% endblock %}
+        </div> <!-- .row -->
+      </div> <!-- .container -->
+    </div> <!-- .app -->
+
+    <footer class="site-footer">
+			<div class="container">
+				<div class="row">
+					<p>Project by <a href="http://twitter.com/thinkxl">@thinkxl</a></p>
+				</div> <!-- .row -->
+			</div> <!-- .container -->
+    </footer> <!-- .site-footer -->
+  </div> <!-- .container -->
+	{# <script src="{{ url_for('static', filename="js/vendor/jquery.min.js")}}"></script> #}
+	{# <script src="{{ url_for('static', filename="js/flat-ui.min.js")}}"></script> #}
+  {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends "layout/base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="col-1-2">
+		<form method="POST" action="/login">
+			{{ form.hidden_tag() }}
+			<div class="form-group">
+				{{ form.email(size=120, class="form-control", placeholder="Email") }}
+			</div> <!-- .form-group -->
+
+			<div class="form-group">
+				{{ form.password(size=120, class="form-control", placeholder="Password") }}
+			</div> <!-- .form-group -->
+
+			<div class="form-group">
+				<input class="btn btn-primary btn-lg btn-block" type="submit" value="Submit">
+			</div>
+		</form>
+	</div> <!-- .col-xs-3 -->
+</div> <!-- .row -->
+
+<hr>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+<a href="/app/bill/{{ _id }}/edit">Edit</a>
+<h4>{{ description }}</h4>
+<p><strong>{{ amount }}</strong></p>
+<p>{{ date  }}</p>
+<p>{{ repeat }}</p>
+<p>{{ comments }}</p>
+{% endblock %}

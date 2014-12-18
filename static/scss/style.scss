@@ -1,0 +1,37 @@
+@import "hyx";
+
+/*
+ * Base 
+ */
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*
+ * Layout 
+ */
+
+.container {
+	margin: 0 auto;
+	max-width: 55em;
+}
+
+/*
+ * Grid 
+ */
+
+$gutter: 3%;
+@include namespace('col-');
+
+.col-1-2 {
+	@include fraction(1/2);
+}
+
+.col-8 {
+	@include cols(8);
+}
+
+.col-4 {
+	@include cols(4);
+}

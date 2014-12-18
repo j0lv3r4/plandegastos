@@ -1,0 +1,32 @@
+{% extends "layout/base.html" %}
+
+{% block title %}New Bill{% endblock %}
+
+{% block vendor_styles %}
+<link href="{{ url_for('static', filename='bower_components/fullcalendar/dist/fullcalendar.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/pikaday.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+  <form class="bill-add-form" method="POST" action="/app/bill/new">
+    <p>
+      {{ form.hidden_tag() }} 
+      {{ form.amount(class="bill-amount", placeholder="Amount") }}
+      {{ form.description(class="bill-description", placeholder="Description") }}
+      {{ form.date(class="bill-date", id="datepicker", placeholder="Date") }}
+      {{ form.repeat(class="bill-repeat") }}
+    </p>
+
+    <p>{{ form.comments(class="bill-comments", placeholder="Comments") }}</p>
+
+    <input type="submit" value="Submit">
+  </form> <!-- .bill-add-form -->
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='bower_components/jquery/dist/jquery.min.js')}}"></script>
+<script src="{{ url_for('static', filename='bower_components/moment/min/moment.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/pikaday.js')}}"></script>
+<script src="{{ url_for('static', filename='js/create-bill.js')}}"></script>
+{% endblock %}
